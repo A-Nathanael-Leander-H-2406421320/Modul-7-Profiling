@@ -41,13 +41,10 @@ public class StudentService {
         return Optional.ofNullable(highestGpaStudent);
     }
 
+    @Transactional(readOnly = true)
     public String joinStudentNames() {
-        List<Student> students = studentRepository.findAll();
-        String result = "";
-        for (Student student : students) {
-            result += student.getName() + ", ";
-        }
-        return result.substring(0, result.length() - 2);
+        List<String> studentNames = studentRepository.findAllNames();
+        return String.join(", ", studentNames);
     }
 }
 
