@@ -2,6 +2,8 @@
 
 ## Test 1: `/all-student` endpoint
 
+### JMeter tests
+
 ![Request of test 1](assets/test1/request.png) Request of test 1
 
 |                                                                               |                                                                                  |
@@ -18,6 +20,20 @@
 
 ![CLI run result of test 1](assets/test1/cli.png) CLI result of test 1
 JTL file of test 1: [test1.jtl](profiling-test/test_result_1.jtl)
+
+### IntelliJ Profiler
+
+Before
+| Flame graph | Timeline |
+| --- | --- |
+| ![Flame graph of test 1 before refactoring](assets/test1/profiler-flame-before.png)<br>Flame graph of test 1 before refactoring | ![Timeline of test 1 before refactoring](assets/test1/profiler-timeline-before.png)<br>Timeline of test 1 before refactoring |
+
+After
+| Flame graph | Timeline |
+| --- | --- |
+| ![Flame graph of test 1 after refactoring](assets/test1/profiler-flame-after.png)<br>Flame graph of test 1 after refactoring | ![Timeline of test 1 after refactoring](assets/test1/profiler-timeline-after.png)<br>Timeline of test 1 after refactoring |
+
+**Refactoring changes**: The changes is in querying the database. Instead of doing N+1 queries to get the students and their courses, we can use `JOIN` to get all the data in one query. This will reduce the number of queries and improve the performance of the endpoint.
 
 ## Test 2: `/all-student-name` endpoint
 
