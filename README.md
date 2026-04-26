@@ -60,3 +60,5 @@ JTL file of test 2: [test2.jtl](profiling-test/test_result_2.jtl)
 
 ![CLI run result of test 3](assets/test3/cli.png) CLI result of test 3
 JTL file of test 3: [test3.jtl](profiling-test/test_result_3.jtl)
+
+**Refactoring changes**: The changes move highest GPA selection from in-memory iteration to the database query layer. Instead of loading all students and scanning in Java, the service now requests only the top record ordered by GPA (`findFirstByOrderByGpaDescIdAsc`). This reduces data transfer and processing time for the endpoint.
