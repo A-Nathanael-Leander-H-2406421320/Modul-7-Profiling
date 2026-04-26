@@ -16,6 +16,9 @@
 
 ![Graph result of test 1](assets/test1/graph.png) Graph result of test 1
 
+![CLI run result of test 1](assets/test1/cli.png) CLI result of test 1
+JTL file of test 1: [test1.jtl](profiling-test/test_result_1.jtl)
+
 ## Test 2: `/all-student-name` endpoint
 
 ![Request of test 2](assets/test2/request.png) Request of test 2
@@ -32,6 +35,9 @@
 
 ![Graph result of test 2](assets/test2/graph.png) Graph result of test 2
 
+![CLI run result of test 2](assets/test2/cli.png) CLI result of test 2
+JTL file of test 2: [test2.jtl](profiling-test/test_result_2.jtl)
+
 ## Test 3: `/highest-gpa` endpoint
 
 ![Request of test 3](assets/test3/request.png) Request of test 3
@@ -47,3 +53,6 @@
 ![Summary result of test 3](assets/test3/summary.png) Summary result of test 3
 
 ![Graph result of test 3](assets/test3/graph.png) Graph result of test 3
+
+![CLI run result of test 3](assets/test3/cli.png) CLI result of test 3
+JTL file of test 3: [test3.jtl](profiling-test/test_result_3.jtl)
